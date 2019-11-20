@@ -86,6 +86,7 @@ namespace LinkedLists
         public void Insert (int index, T item)
         {
             ListNode<T> current = head;
+
             if (index > Count)
             {
                 throw new IndexOutOfRangeException("Learn to count, idiot! There's not that many elements!");
