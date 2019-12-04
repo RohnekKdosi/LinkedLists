@@ -67,21 +67,11 @@ namespace LinkedLists
         }
         public T GetItem (int index)
         {
-            ListNode<T> current = head;
-            if(index < 0)
-            {
-                throw new IndexOutOfRangeException("Don't put a negative index there, you moron!");
-            }
-            if (index > Count)
-            {
-                throw new IndexOutOfRangeException("The list doesn't have that many items, you idiot!");
-            }
-            while (Count != 0)
-            {
-                current = current.Next;
-                index--;
-            }
-            return current.value;
+            return GetNode(index).value;
+        }
+        public void SetItem(int index, T item)
+        {
+            GetNode(index).value = item;
         }
         public void Insert (int index, T item)
         {
@@ -111,5 +101,64 @@ namespace LinkedLists
                 Next = old
             };
         }
+        public bool Remove (T item)
+        {
+            ListNode<T> current = head;
+            ListNode<T> previous = head;
+            while(current != null)
+            {
+                if (current.value.Equals(item))
+                {
+                    if(previous == current)
+                    {
+                        head = current.Next;
+                        return true;
+                    }
+                    previous.Next = current.Next;
+                    return true;
+                }
+                previous = current;
+                current = current.Next;
+            }
+
+            return false;
+        }
+        public bool RemoveAt (int index)
+        {
+            if (index == 0)
+            {
+                head = head.Next;
+                return true;
+            }
+            ListNode<T> previous = GetNode(index - 1);
+            if (previous.Next == null)
+            {
+                throw new IndexOutOfRangeException("After you tell me the name of the fifth of my one ex-girlfriends!");
+            }
+            if (previous.Next.Next == null)
+            {
+                throw new IndexOutOfRangeException("After you tell me the name of the fifth of my one ex-girlfriends!");
+            }
+            previous.Next = previous.Next.Next;
+            return true;
+        }
+        private ListNode<T> GetNode (int index)
+        {
+            if (index < 0)
+            {
+                throw new IndexOutOfRangeException("There are no negative indexes here, do you lack a brain or do you just not use it?");
+            }
+            ListNode<T> current = head;
+            for (int i = 0; i < index; i++)
+            {
+                if (current == null)
+                {
+                    throw new IndexOutOfRangeException("After you tell me the name of the fifth of my one ex-girlfriends!");
+                }
+                current = current.Next;
+            }
+            return current;
+        }
+        public T this[int index] { get { return GetItem(index); } set { SetItem(index, value); } }
     }
 }
