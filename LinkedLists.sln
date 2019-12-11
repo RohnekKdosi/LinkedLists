@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedLists", "LinkedLists\LinkedLists.csproj", "{85B7887A-0BE0-4E78-8334-BB4C29DC4A57}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{D18E8A48-287E-4827-92A0-269B1E51CC9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedLists", "LinkedLists\LinkedLists.csproj", "{85B7887A-0BE0-4E78-8334-BB4C29DC4A57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{85B7887A-0BE0-4E78-8334-BB4C29DC4A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B7887A-0BE0-4E78-8334-BB4C29DC4A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B7887A-0BE0-4E78-8334-BB4C29DC4A57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D18E8A48-287E-4827-92A0-269B1E51CC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D18E8A48-287E-4827-92A0-269B1E51CC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D18E8A48-287E-4827-92A0-269B1E51CC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D18E8A48-287E-4827-92A0-269B1E51CC9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
